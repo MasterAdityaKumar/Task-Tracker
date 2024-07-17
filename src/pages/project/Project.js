@@ -1,24 +1,27 @@
-import { useParams } from "react-router-dom";
-import { useDocument } from "../../hooks/useDocument";
-import ProjectSummary from "./ProjectSummary";
-import "./Project.css";
-import ProjectComments from "./ProjectComments";
+import { useParams } from 'react-router-dom';
 
-export default function Project() {
-  const { id } = useParams();
-  const { document, error } = useDocument("projects", id);
-  if (error) {
-    return <div className="error project-margin">{error}</div>;
-  }
+import { useDocument } from '../../hooks/useDocument';
 
-  if (!document) {
-    return <div className="loading project-margin">loading....</div>;
-  }
+import './Project.css';
+import { ProjectComments } from './ProjectComments';
+import { ProjectSummary } from './ProjectSummary';
 
-  return (
-    <div className="project-details pages-margin">
-      <ProjectSummary project={document} />
-      <ProjectComments project={document} />
-    </div>
-  );
-}
+const Project = () => {
+	const { id } = useParams();
+	const { document: project, error } = useDocument('projects', id);	
+	if (error) {
+		return <div className='error'>{error}</div>
+	};
+	if (!project) {
+		return <div className='loading'>Loading...</div>
+	}
+	return (
+		<div className='project-details'>
+			<ProjectSummary project={project}/>
+			<ProjectComments project={project}/>
+		</div>
+	)
+
+};
+
+export default Project;

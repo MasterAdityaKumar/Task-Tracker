@@ -1,44 +1,43 @@
-import { useState } from "react";
-import { useLogin } from "../../hooks/useLogin";
-import "./Login.css";
-export default function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const { login, isPending, error } = useLogin();
+// Importamos nuestro custom hook
+import React, { useState } from 'react';
+import { useLogin } from '../../hooks/useLogin';
+import './Login.css';
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    login(email, password);
-  };
-  return (
-    <form className="auth-form" onSubmit={handleSubmit}>
-      <h2>Login</h2>
-      <label>
-        <span>email:</span>
-        <input
-          required
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        ></input>
-      </label>
-      <label>
-        <span>password:</span>
-        <input
-          required
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        ></input>
-      </label>
 
-      {!isPending && <button className="btn">login</button>}
-      {isPending && (
-        <button className="btn" disabled>
-          loading...
-        </button>
-      )}
-      {error && <div className="error">{error}</div>}
-    </form>
-  );
-}
+const Login = () => {
+	const [email, setEmail] = useState('');
+	const [password, setPassword] = useState('');
+	const {login, error, isPending} = useLogin();
+
+	const handleSubmit = e => {
+		e.preventDefault();
+		login(email, password)
+	}
+
+	return (
+		<form className='auth-form' onSubmit={handleSubmit}>	
+			<label>
+				<span>Email</span>
+				<input
+					type='email'
+					onChange={e => setEmail(e.target.value)}
+					required
+					value={email}
+				/>
+			</label>
+			<label>
+				<span>Password: </span>
+				<input
+					type='password'
+					onChange={e => setPassword(e.target.value)}
+					required
+					value={password}
+				/>
+			</label>
+			{isPending ? <button disabled>Loading...</button>: <button className='btn'>Login</button>}
+			{error && <p className='error'>{error}</p>}
+		</form>
+	);
+};
+
+export default Login;

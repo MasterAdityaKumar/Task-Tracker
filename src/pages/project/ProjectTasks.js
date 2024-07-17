@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Avatar from "../../components/Avatar";
+import Avatar from "../../components/avatar/Avatar";
 // import doneIcon from "../../assets/done.svg";
 
 import { useAuthContext } from "../../hooks/useAuthContext";
