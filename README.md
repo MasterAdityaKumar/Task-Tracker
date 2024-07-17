@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+# Task Tracker Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple Task Tracker web app built with React.js and Firebase that allows users to add, edit, and delete tasks. Each task includes a title, description, and status (e.g., "In Progress" or "Completed"). The app also supports user authentication and task validation.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Add new tasks with titles, descriptions, and statuses.
+- Edit existing tasks.
+- Delete tasks from the list.
+- User authentication to access task tracking features.
+- Validation to ensure task titles are not empty.
+- Mark tasks as completed or move them between "In Progress" and "Completed."
 
-### `npm start`
+## Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+You can try the app live at [Task Tracker App](https://task-tracker-5c2d6.web.app).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![pic 1](https://github.com/MasterAdityaKumar/Task-Tracker/assets/108165308/227ae897-1416-4872-a2f3-33ef8a395201)
+![pic 2](https://github.com/MasterAdityaKumar/Task-Tracker/assets/108165308/3ff51956-f2fd-42ea-a2f7-e1f13b44fad4)
+![pic3](https://github.com/MasterAdityaKumar/Task-Tracker/assets/108165308/77446d70-afaa-4245-b20a-21c05db2b732)
