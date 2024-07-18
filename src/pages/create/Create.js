@@ -33,6 +33,7 @@ const Create = () => {
 	const [category, setCategory] = useState('');
 	const [assignedUsers, setAssignedUsers] = useState([]);
 	const [users, setUsers] = useState([]);
+  // eslint-disable-next-line
 	const { documents, error } = useCollection('users');
 	const [formError, setFormError] = useState(null);
 	const { user } = useAuthContext();  
