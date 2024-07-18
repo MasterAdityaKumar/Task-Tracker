@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLogout } from '../../hooks/useLogout';
-import templeLogo from '../../assets/temple.svg';
+import templeLogo from '../../assets/logo.jpg';
 import './Navbar.css';
 import { useAuthContext } from '../../hooks/useAuthContext';
 
@@ -13,8 +13,8 @@ const Navbar = () => {
 		<div className='navbar'>
 			<ul>
 				<li className='logo'>
-					<img src={templeLogo} alt='dojo-logo' />
-					<span>P. Management App</span>
+					<img src={templeLogo} alt='logo' />
+					<span>Task Tracker App</span>
 				</li>
 				{!user && (
 					<>
