@@ -39,7 +39,7 @@ const Dashboard = () => {
 
 	return (
 		<div>
-			<h2 className='page-title'></h2>
+			<h2 className='page-title'>&nbsp;</h2>
 			{error && <p className='error'>{error}</p>}
 			{projects && <ProjectFilter currentFilter={currentFilter} changeFilter={changeFilter}/>}
 			{projects && <ProjectList projects={filteredProjects}/>}
