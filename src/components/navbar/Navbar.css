@@ -21,8 +21,8 @@
 .navbar .logo img {
 	margin-right: 10px;
 	filter: invert(25%);
-	width: 80px; /* Adjust the size as needed */
-	height:80px; /* Ensure the height is the same as the width for a perfect circle */
+	width: 50px; /* Adjust the size as needed */
+	height:50px; /* Ensure the height is the same as the width for a perfect circle */
 	margin-top: -8px;
 	border-radius: 50%; /* Makes the logo round */
 	object-fit: cover; /* Ensures the image covers the entire area */

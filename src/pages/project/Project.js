@@ -3,25 +3,24 @@ import { useParams } from 'react-router-dom';
 import { useDocument } from '../../hooks/useDocument';
 
 import './Project.css';
-import { ProjectComments } from './ProjectComments';
-import { ProjectSummary } from './ProjectSummary';
+import  ProjectComments from './ProjectComments';
+import  ProjectSummary  from './ProjectSummary';
 
-const Project = () => {
-	const { id } = useParams();
-	const { document: project, error } = useDocument('projects', id);	
+export default function Project() {
+	const { id } = useParams()
+	const { document, error } = useDocument('projects', id)
+  
 	if (error) {
-		return <div className='error'>{error}</div>
-	};
-	if (!project) {
-		return <div className='loading'>Loading...</div>
+	  return <div className="error">{error}</div>
+	}
+	if (!document) {
+	  return <div className="loading">loading...</div>
 	}
 	return (
-		<div className='project-details'>
-			<ProjectSummary project={project}/>
-			<ProjectComments project={project}/>
-		</div>
+	  <div className="project-details">
+		<ProjectSummary project={document} />
+		<ProjectComments project={document} />
+	  </div>
 	)
-
-};
-
-export default Project;
+  }
+  

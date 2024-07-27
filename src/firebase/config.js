@@ -4,14 +4,13 @@ import 'firebase/auth';
 import 'firebase/storage'
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBsNWPtk1edPO9_RFuhGXqWf_OjMB20gJU",
-    authDomain: "task-tracker-5c2d6.firebaseapp.com",
-    projectId: "task-tracker-5c2d6",
-    storageBucket: "task-tracker-5c2d6.appspot.com",
-    messagingSenderId: "581413394654",
-    appId: "1:581413394654:web:c31d900d6ec739a33d8a4f"
-  };
-
+  apiKey: "AIzaSyCdGtYykNNBezTXCrjnT5XibE9tqSzxu_4",
+  authDomain: "tasktracker-3bb91.firebaseapp.com",
+  projectId: "tasktracker-3bb91",
+  storageBucket: "tasktracker-3bb91.appspot.com",
+  messagingSenderId: "933420466856",
+  appId: "1:933420466856:web:d86e81c7964afe0305389d"
+};
 
   firebase.initializeApp(firebaseConfig);
 
@@ -24,3 +23,11 @@ const projectStorage = firebase.storage();
 const timestamp = firebase.firestore.Timestamp;
 
 export { projectFirestore, projectAuth, projectStorage, timestamp };
+
+// user collection
+// - any authenticated user can read and create
+// - only user who "own/created" a document can update it (user id match)
+
+// projects collection
+// - any authenticated user can read, create and update a document
+// - only users who "own/created" a document can delete it
